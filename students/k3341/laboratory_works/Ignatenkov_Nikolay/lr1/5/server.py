@@ -50,7 +50,7 @@ class MyHTTPServer:
             return self.send_response(405, "Method Not Allowed", "Method not supported")
 
     def handle_get(self, path):
-        html_content = "<html><body><h1>journal</h1><ul>"
+        html_content = "<html><body><h1>Journal</h1><ul>"
         for subject, grades in self.data.items():
             html_content += f"<li>{subject}: {', '.join(map(str, grades))}</li>"
         html_content += "</ul></body></html>"
